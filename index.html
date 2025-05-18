@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letting Go of Guilt - Self-Forgiveness Checklist</title>
+    <style>
+        :root {
+            --primary-color: #6a4c93;
+            --secondary-color: #4a306d;
+            --accent-color: #9e8fb2;
+            --light-color: #f8f1ff;
+            --dark-color: #3e3347;
+            --success-color: #5cb85c;
+        }
+        
+        /* PURPLE BANNER */
+        .checklist-banner {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 25px -30px;
+        }
+        .checklist-banner h1 {
+            color: white;
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .checklist-banner .subtitle {
+            color: rgba(255,255,255,0.9);
+            margin: 8px 0 0;
+            font-style: italic;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f5f0fa;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            background-color: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+        
+        .checklist-item:hover {
+            background-color: rgba(158, 143, 178, 0.1);
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            margin-right: 15px;
+            transform: scale(1.3);
+            cursor: pointer;
+            margin-top: 3px;
+        }
+        
+        .checklist-text {
+            flex-grow: 1;
+        }
+        
+        .checklist-item label {
+            cursor: pointer;
+            display: block;
+            font-weight: 500;
+        }
+        
+        .checklist-item .item-description {
+            font-size: 0.95em;
+            color: #555;
+            margin-top: 5px;
+            margin-left: 30px;
+            font-style: italic;
+        }
+        
+        .notes-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+            font-size: 1.1em;
+            margin-left: 10px;
+            padding: 5px;
+        }
+        
+        .notes-btn:hover {
+            color: var(--secondary-color);
+        }
+        
+        .notes-box {
+            display: none;
+            width: 100%;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+        
+        .notes-box textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            min-height: 60px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        .progress-container {
+            margin: 30px 0;
+            background-color: #e9ecef;
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background-color: var(--success-color);
+            width: 0%;
+            transition: width 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .progress-text {
+            text-align: center;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+        
+        .reflection {
+            margin-top: 30px;
+        }
+        
+        .reflection h3 {
+            margin-bottom: 10px;
+        }
+        
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            min-height: 80px;
+            margin-bottom: 15px;
+            font-family: inherit;
+        }
+        
+        .celebration {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--success-color);
+            color: white;
+            border-radius: 8px;
+            margin: 30px 0;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .celebration h2 {
+            color: white;
+            border-bottom: none;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .reset-btn {
+            background-color: #dc3545;
+        }
+        
+        .reset-btn:hover {
+            background-color: #c82333;
+        }
+        
+        .print-btn {
+            background-color: #6c757d;
+        }
+        
+        .print-btn:hover {
+            background-color: #5a6268;
+        }
+        
+        .instructions {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-top: 30px;
+            padding-top: 15px;
+            border-top: 1px dashed #ced4da;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .section {
+                padding: 15px;
+            }
+            
+            .checklist-banner {
+                margin: -15px -15px 15px -15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- PURPLE BANNER -->
+        <div class="checklist-banner">
+            <h1>LETTING GO OF GUILT</h1>
+            <p class="subtitle">A 10-Step Self-Forgiveness Checklist</p>
+        </div>
+
+        <div class="progress-text">Progress: <span id="progress-percent">0</span>%</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar">0%</div>
+        </div>
+        
+        <div class="celebration" id="celebration">
+            <h2>🌟 Self-Forgiveness Achieved! 🌟</h2>
+            <p>You've completed all steps toward releasing guilt and embracing self-compassion.</p>
+            <p>Remember: <em>"You are allowed to grow. You are allowed to forgive yourself."</em></p>
+        </div>
+        
+        <div class="section">
+            <h2>Morning Reflection</h2>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item1" data-category="morning">
+                <div class="checklist-text">
+                    <label for="item1">Name the guilt</label>
+                    <div class="item-description">What exactly am I feeling guilty about? (Action, thought, decision?)</div>
+                    <div class="notes-box" id="notes1">
+                        <textarea placeholder="Describe what you're feeling guilty about..."></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes1')">📝</button>
+            </div>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item2" data-category="morning">
+                <div class="checklist-text">
+                    <label for="item2">Acknowledge the feeling</label>
+                    <div class="item-description">Can I allow myself to feel guilt without judging myself for having it?</div>
+                    <div class="notes-box" id="notes2">
+                        <textarea placeholder="How does this guilt feel in your body?"></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes2')">📝</button>
+            </div>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item3" data-category="morning">
+                <div class="checklist-text">
+                    <label for="item3">Accept my humanity</label>
+                    <div class="item-description">Can I say, "I made a mistake, but I am not a bad person."</div>
+                    <div class="notes-box" id="notes3">
+                        <textarea placeholder="Write your affirmation here..."></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes3')">📝</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Daily Practice</h2>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item4" data-category="daily">
+                <div class="checklist-text">
+                    <label for="item4">Separate fact from feeling</label>
+                    <div class="item-description">Am I guilty because I truly harmed someone, or because I fell short of my own impossible standards?</div>
+                    <div class="notes-box" id="notes4">
+                        <textarea placeholder="List the facts vs. feelings..."></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes4')">📝</button>
+            </div>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item5" data-category="daily">
+                <div class="checklist-text">
+                    <label for="item5">Take responsibility (without self-blame)</label>
+                    <div class="item-description">What part was within my control, and what wasn't?</div>
+                    <div class="notes-box" id="notes5">
+                        <textarea placeholder="What was in your control? What wasn't?"></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes5')">📝</button>
+            </div>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item6" data-category="daily">
+                <div class="checklist-text">
+                    <label for="item6">Make amends if possible</label>
+                    <div class="item-description">Is there an apology, action, or change I can offer to repair the situation?</div>
+                    <div class="notes-box" id="notes6">
+                        <textarea placeholder="How can you make amends?"></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes6')">📝</button>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Evening Reflection</h2>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item7" data-category="evening">
+                <div class="checklist-text">
+                    <label for="item7">Forgive myself, even if others don't</label>
+                    <div class="item-description">Can I choose to release the guilt for my own healing, regardless of how others respond?</div>
+                    <div class="notes-box" id="notes7">
+                        <textarea placeholder="Write your forgiveness statement..."></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes7')">📝</button>
+            </div>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item8" data-category="evening">
+                <div class="checklist-text">
+                    <label for="item8">Learn the lesson</label>
+                    <div class="item-description">What can this experience teach me about myself, my values, or my growth?</div>
+                    <div class="notes-box" id="notes8">
+                        <textarea placeholder="What did you learn?"></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes8')">📝</button>
+            </div>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item9" data-category="evening">
+                <div class="checklist-text">
+                    <label for="item9">Replace guilt with compassion</label>
+                    <div class="item-description">What would I say to a beloved friend in my shoes? Now, say it to myself.</div>
+                    <div class="notes-box" id="notes9">
+                        <textarea placeholder="Write your compassionate statement..."></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes9')">📝</button>
+            </div>
+            
+            <div class="checklist-item">
+                <input type="checkbox" id="item10" data-category="evening">
+                <div class="checklist-text">
+                    <label for="item10">Move forward</label>
+                    <div class="item-description">What is one small step I can take today to live lighter and freer?</div>
+                    <div class="notes-box" id="notes10">
+                        <textarea placeholder="Your action step..."></textarea>
+                    </div>
+                </div>
+                <button class="notes-btn" onclick="toggleNotes('notes10')">📝</button>
+            </div>
+        </div>
+        
+        <div class="reflection">
+            <h2>Weekly Reflection</h2>
+            
+            <div class="section">
+                <h3>How heavy does this guilt feel now? (1-10):</h3>
+                <input type="range" id="guilt-rating" min="1" max="10" step="1" style="width: 100%;">
+                <div style="display: flex; justify-content: space-between;">
+                    <span>1 (Light)</span>
+                    <span>5</span>
+                    <span>10 (Heavy)</span>
+                </div>
+                <p style="text-align: center; margin-top: 5px;">Rating: <span id="rating-value">5</span>/10</p>
+                
+                <h3>What surprised you about this process?</h3>
+                <textarea id="surprise-reflection" placeholder="Write your thoughts here..."></textarea>
+                
+                <h3>What self-compassion practice will you continue?</h3>
+                <textarea id="compassion-practice" placeholder="Write your thoughts here..."></textarea>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="save-btn">Save Progress</button>
+            <button id="print-btn" class="print-btn" onclick="window.print()">Print Checklist</button>
+            <button id="reset-btn" class="reset-btn">Reset Checklist</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>How to Use This Checklist:</h3>
+            <ol>
+                <li><strong>Work through steps sequentially</strong> when guilt arises.</li>
+                <li><strong>Click the notepad icon 📝</strong> next to each statement to add personal notes.</li>
+                <li><strong>Your progress saves automatically</strong> between sessions.</li>
+                <li><strong>Print</strong> your completed checklist for reference.</li>
+            </ol>
+            <p><em>You are allowed to grow. You are allowed to forgive yourself. You are allowed to move on.</em></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load saved data
+            loadProgress();
+            
+            // Update progress when checkboxes change
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateProgress);
+            });
+            
+            // Update rating display
+            const ratingSlider = document.getElementById('guilt-rating');
+            const ratingValue = document.getElementById('rating-value');
+            ratingSlider.addEventListener('input', function() {
+                ratingValue.textContent = this.value;
+            });
+            
+            // Save button
+            document.getElementById('save-btn').addEventListener('click', saveProgress);
+            
+            // Reset button
+            document.getElementById('reset-btn').addEventListener('click', resetProgress);
+            
+            // Initial progress update
+            updateProgress();
+        });
+        
+        function toggleNotes(id) {
+            const notesBox = document.getElementById(id);
+            notesBox.style.display = notesBox.style.display === 'block' ? 'none' : 'block';
+        }
+        
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+            const progress = (checked.length / checkboxes.length) * 100;
+            
+            const progressBar = document.getElementById('progress-bar');
+            const progressPercent = document.getElementById('progress-percent');
+            
+            progressBar.style.width = progress + '%';
+            progressBar.textContent = Math.round(progress) + '%';
+            progressPercent.textContent = Math.round(progress);
+            
+            // Update completed class on checklist items
+            checkboxes.forEach(checkbox => {
+                const item = checkbox.closest('.checklist-item');
+                if (checkbox.checked) {
+                    item.classList.add('completed');
+                } else {
+                    item.classList.remove('completed');
+                }
+            });
+            
+            // Show celebration if all checked
+            if (checked.length === checkboxes.length) {
+                document.getElementById('celebration').style.display = 'block';
+            } else {
+                document.getElementById('celebration').style.display = 'none';
+            }
+        }
+        
+        function saveProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checkboxStates = {};
+            
+            checkboxes.forEach(checkbox => {
+                checkboxStates[checkbox.id] = checkbox.checked;
+            });
+            
+            // Save checkbox states
+            localStorage.setItem('guiltChecklist', JSON.stringify(checkboxStates));
+            
+            // Save notes
+            const notes = {};
+            for (let i = 1; i <= 10; i++) {
+                notes[`notes${i}`] = document.getElementById(`notes${i}`).querySelector('textarea').value;
+            }
+            localStorage.setItem('guiltNotes', JSON.stringify(notes));
+            
+            // Save reflection data
+            localStorage.setItem('guiltRating', document.getElementById('guilt-rating').value);
+            localStorage.setItem('surpriseReflection', document.getElementById('surprise-reflection').value);
+            localStorage.setItem('compassionPractice', document.getElementById('compassion-practice').value);
+            
+            alert('Progress saved! Your reflections will be here when you return.');
+        }
+        
+        function loadProgress() {
+            // Load checkboxes
+            const savedData = localStorage.getItem('guiltChecklist');
+            if (savedData) {
+                const checkboxStates = JSON.parse(savedData);
+                
+                for (const id in checkboxStates) {
+                    const checkbox = document.getElementById(id);
+                    if (checkbox) {
+                        checkbox.checked = checkboxStates[id];
+                    }
+                }
+            }
+            
+            // Load notes
+            const savedNotes = localStorage.getItem('guiltNotes');
+            if (savedNotes) {
+                const notes = JSON.parse(savedNotes);
+                for (const id in notes) {
+                    const textarea = document.getElementById(id)?.querySelector('textarea');
+                    if (textarea) {
+                        textarea.value = notes[id];
+                    }
+                }
+            }
+            
+            // Load reflection data
+            if (localStorage.getItem('guiltRating')) {
+                document.getElementById('guilt-rating').value = localStorage.getItem('guiltRating');
+                document.getElementById('rating-value').textContent = localStorage.getItem('guiltRating');
+            }
+            
+            document.getElementById('surprise-reflection').value = localStorage.getItem('surpriseReflection') || '';
+            document.getElementById('compassion-practice').value = localStorage.getItem('compassionPractice') || '';
+        }
+        
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset your progress? This cannot be undone.')) {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+                
+                // Clear notes
+                for (let i = 1; i <= 10; i++) {
+                    document.getElementById(`notes${i}`).querySelector('textarea').value = '';
+                }
+                
+                // Clear reflections
+                document.getElementById('guilt-rating').value = 5;
+                document.getElementById('rating-value').textContent = 5;
+                document.getElementById('surprise-reflection').value = '';
+                document.getElementById('compassion-practice').value = '';
+                
+                updateProgress();
+                saveProgress();
+            }
+        }
+    </script>
+</body>
+</html>
